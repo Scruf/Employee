@@ -10,5 +10,11 @@ package com.egor.employee;
  * @author Egor
  */
 public class Source {
-    
+    public static void main (String []args)
+    {
+        Employee emp = new Employee();
+        emp.setDateOfBirth("01/02/1993");
+        Employee emp1=emp;
+        System.out.print(emp1.getCount());
+    }
 }

@@ -16,12 +16,37 @@ public class Employee {
     private String firstName;
     private String lastName;
     private String datefBirthte;
-    private Integer age;
+    private int age;
     private String address;
     private String phone;
     private String email;
     private String jobTitle;
     private static Integer count =0;
+    Employee()
+    {
+        this.ssNumber="";
+        this.firstName="";
+        this.lastName="";
+        this.datefBirthte="1/1/1900";
+        this.age=0;
+        this.address="";
+        this.phone="";
+        this.email="";
+        this.jobTitle="";
+        count++;
+    }
+    Employee(String ssn,String fn,String ln,String dob,String addr,String phone,String em,String job)
+    {
+        setSSNumber(ssn);
+        setFirstName(fn);
+        setLastName(ln);
+        setDateOfBirth(dob);
+        setAddress(addr);
+        setPhone(phone);
+        setEmail(em);
+        setJobTitle(job);
+        count++;
+    }
         public String getSSNumber()
         {
             return ssNumber;
@@ -77,28 +102,92 @@ public class Employee {
         }
         public void setDateOfBirth(String DOB)
         {
-            String db;
-            Scanner scanner = new Scanner (System.in);
-            while(DOB.equals(" "))
-            {
-                System.out.print("Date of birth cannot be empty!!");
-                db=scanner.next();
-                DOB=db;
-            }
+         
+           
             this.datefBirthte=DOB;
             Date dat = new Date();
             Integer year;
-            String de,mt,yr;
-            char []arr=new char[DOB.length()];
-            for(int i=0;i<DOB.length();i++)
+            String reverse = new StringBuilder(DOB).reverse().toString();
+            System.out.print("Reverse year "+reverse);
+            String yearS;
+            StringBuilder str2 = new StringBuilder(reverse);
+            str2.delete(4,str2.length());
+            yearS = new StringBuilder(str2).reverse().toString();
+            System.out.print("\n Normal year "+yearS);
+            year=Integer.parseInt(yearS);
+            System.out.print("\n year is "+dat.getYear());
+            this.age=dat.getYear()-year;
+        }
+        public Integer getAge()
+        {
+            return age;
+        }
+        public String getAddress()
+        {
+            return address;
+        }
+        public void setAddress(String add)
+        {
+            Scanner scan = new Scanner(System.in);
+            while(add.equals(" "))
             {
-               arr[i]=DOB.charAt(i);
+                System.out.print("Address cannot be empty!!");
+                add=scan.next();
             }
-            
-            
-            
-             
-       }
+            this.address=add;
+        }
+        public String getPhone()
+        {
+            return phone;
+        }
+        public void setPhone(String ph)
+        {
+            Scanner scan = new Scanner (System.in);
+            while(ph.equals(" "))
+            {
+                System.out.print("You cannot leave empty telphone number!! ");
+                ph=scan.next();
+            }
+            this.phone=ph;
+        }
+        public String getEmail()
+        {
+            return email;
+        }
+        public void setEmail(String em)
+        {
+            Scanner scan = new Scanner(System.in);
+            while(em.equals(" "))
+            {
+                System.out.print("Email cannot be empty!!");
+                em=scan.next();
+            }
+            this.email=em;
+        }
+        
+        public String getJobTitle()
+        {
+            return this.jobTitle;
+        }
+        public void setJobTitle(String jb)
+        {
+            Scanner scan = new Scanner (System.in);
+            while(jb.equals(" "))
+            {
+                System.out.print("Job title cannot be empty!");
+                jb=scan.next();
+            }
+            this.jobTitle=jb;
+        }
+        public static Integer getCount()
+        {
+            return count;
+        }
+      /*  public static Integer setCount(int i)
+        {
+            count=i;
+        }*/
+        
                 
             
 }
