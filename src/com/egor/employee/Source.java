@@ -14,7 +14,6 @@ public class Source {
     {
         Employee emp = new Employee();
         emp.setDateOfBirth("01/02/1993");
-        Employee emp1=emp;
-        System.out.print(emp1.getCount());
+        System.out.print(emp.getAge());
     }
 }

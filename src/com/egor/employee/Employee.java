@@ -11,6 +11,9 @@ package com.egor.employee;
  */
 import java.util.Scanner;
 import java.util.Date;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 public class Employee {
     private String ssNumber;
     private String firstName;
@@ -105,18 +108,19 @@ public class Employee {
          
            
             this.datefBirthte=DOB;
-            Date dat = new Date();
+           
+            Integer yearC=Calendar.getInstance().get(Calendar.YEAR);
             Integer year;
             String reverse = new StringBuilder(DOB).reverse().toString();
-            System.out.print("Reverse year "+reverse);
+           // System.out.print("Reverse year "+reverse);
             String yearS;
             StringBuilder str2 = new StringBuilder(reverse);
             str2.delete(4,str2.length());
             yearS = new StringBuilder(str2).reverse().toString();
-            System.out.print("\n Normal year "+yearS);
+            //System.out.print("\n Normal year "+yearS);
             year=Integer.parseInt(yearS);
-            System.out.print("\n year is "+dat.getYear());
-            this.age=dat.getYear()-year;
+            this.age=yearC-year;
+           // this.age=dat.getYear()-year;
         }
         public Integer getAge()
         {
