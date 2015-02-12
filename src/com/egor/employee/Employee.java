@@ -65,7 +65,7 @@ public class Employee {
                 ssn=tst;
             }
              this.ssNumber=ssn;
-                
+
         }
         public String getFirstName()
         {
@@ -105,10 +105,10 @@ public class Employee {
         }
         public void setDateOfBirth(String DOB)
         {
-         
-           
+
+
             this.datefBirthte=DOB;
-           
+
             Integer yearC=Calendar.getInstance().get(Calendar.YEAR);
             Integer year;
             String reverse = new StringBuilder(DOB).reverse().toString();
@@ -168,7 +168,7 @@ public class Employee {
             }
             this.email=em;
         }
-        
+
         public String getJobTitle()
         {
             return this.jobTitle;
@@ -203,7 +203,7 @@ public class Employee {
         {
             count=i;
         }
-        
-                
-            
+
+
+
 }

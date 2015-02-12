@@ -12,8 +12,8 @@ package com.egor.employee;
 public class Source {
     public static void main (String []args)
     {
-        Employee emp = new Employee();
-        emp.setDateOfBirth("01/02/1993");
-        System.out.print(emp.getAge());
-    }
+        Employee emp1 = new Employee();
+        Employee emp2 ;
+        emp2 = new Employee("7789821234","Egor","Kozitski","01/06/1993","2363 81st","3475838019","software developer");
+/    }
 }
