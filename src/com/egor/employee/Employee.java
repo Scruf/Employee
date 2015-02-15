@@ -190,14 +190,14 @@ public class Employee {
         public void print()
         {
             System.out.print("Employee information\n"
-                    +       "First Name "+getFirstName()+"\n"
-                    +       "Last Name "+getLastName()+"\n"
-                    +       "Social Security "+getSSNumber()+"\n"
-                    +       "Date Of Birth "+getDateOfBirth()+"\n"
-                    +       "Address "+getAddress()+"\n"
-                    +       "Age "+getAge()+"\n"
-                    +       "Email "+getEmail()+"\n"
-                    +       "Title "+getJobTitle()+"\n");
+                    +       "First Name: "+getFirstName()+"\n"
+                    +       "Last Name: "+getLastName()+"\n"
+                    +       "Social Security: "+getSSNumber()+"\n"
+                    +       "Date Of Birth: "+getDateOfBirth()+"\n"
+                    +       "Address: "+getAddress()+"\n"
+                    +       "Age: "+getAge()+"\n"
+                    +       "Email: "+getEmail()+"\n"
+                    +       "Title: "+getJobTitle()+"\n");
         }
        public static void setCount(int i)
         {
