@@ -56,14 +56,7 @@ public class Employee {
         }
         public void setSSNumber(String ssn)
         {
-            Scanner scan = new Scanner (System.in);
-            String tst;
-             while(ssn.equals(" "))
-            {
-                System.out.print("Social Security number is incorrect! ");
-                tst=scan.next();
-                ssn=tst;
-            }
+          
              this.ssNumber=ssn;
 
         }
@@ -73,14 +66,7 @@ public class Employee {
         }
         public void setFirstName(String fn)
         {
-            Scanner scan = new Scanner(System.in);
-            String tst;
-            while(fn.equals(" "))
-            {
-                System.out.print("First name cannot be empty! ");
-                tst=scan.next();
-                fn=tst;
-            }
+          
             this.firstName=fn;
         }
         public String getLastName()
@@ -89,14 +75,7 @@ public class Employee {
         }
         public void setLastName(String ln)
         {
-            Scanner scan=new Scanner(System.in);
-            String tst;
-            while(ln.equals(" "))
-            {
-                System.out.print("Last name acannot be empty! ");
-                tst=scan.next();
-                ln=tst;
-            }
+          
             this.lastName=ln;
         }
         public String getDateOfBirth()
@@ -132,12 +111,7 @@ public class Employee {
         }
         public void setAddress(String add)
         {
-            Scanner scan = new Scanner(System.in);
-            while(add.equals(" "))
-            {
-                System.out.print("Address cannot be empty!!");
-                add=scan.next();
-            }
+           
             this.address=add;
         }
         public String getPhone()
@@ -146,12 +120,7 @@ public class Employee {
         }
         public void setPhone(String ph)
         {
-            Scanner scan = new Scanner (System.in);
-            while(ph.equals(" "))
-            {
-                System.out.print("You cannot leave empty telphone number!! ");
-                ph=scan.next();
-            }
+          
             this.phone=ph;
         }
         public String getEmail()
@@ -160,12 +129,7 @@ public class Employee {
         }
         public void setEmail(String em)
         {
-            Scanner scan = new Scanner(System.in);
-            while(em.equals(" "))
-            {
-                System.out.print("Email cannot be empty!!");
-                em=scan.next();
-            }
+           
             this.email=em;
         }
 
@@ -175,12 +139,7 @@ public class Employee {
         }
         public void setJobTitle(String jb)
         {
-            Scanner scan = new Scanner (System.in);
-            while(jb.equals(" "))
-            {
-                System.out.print("Job title cannot be empty!");
-                jb=scan.next();
-            }
+           
             this.jobTitle=jb;
         }
         public static Integer getCount()
